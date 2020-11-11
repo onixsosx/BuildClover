@@ -33,8 +33,8 @@ if [[ ! -d $BUILDCLOVER_DIR/FileSystems/HFSPlus/X64 ]]; then
 fi
 #x64
 echo -e "\033[1mCopying Custom EFI drivers.\033[0m"
-cp -f "$SRC_DIR"/drivers/HFSPlus-64.efi $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/drivers/UEFI/HFSPlus.efi
-cp -f "$SRC_DIR"/drivers/HFSPlus-64.efi $BUILDCLOVER_DIR/FileSystems/HFSPlus/X64/HFSPlus.efi
+cp -f "$SRC_DIR"/drivers/HFSPlus.efi $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/drivers/UEFI/HFSPlus.efi
+cp -f "$SRC_DIR"/drivers/HFSPlus.efi $BUILDCLOVER_DIR/FileSystems/HFSPlus/X64/HFSPlus.efi
 #x32
 if [[ ! -d $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/drivers32 ]]; then
 	mkdir -p $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/drivers32
