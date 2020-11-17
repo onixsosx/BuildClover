@@ -28,13 +28,7 @@ echo -e "\033[1mRunning Post-build expansion script for buildme.\033[0m"
 if [[ ! -d $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/kexts/Off ]]; then
 	mkdir -p $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/kexts/Off
 fi
-if [[ ! -d $BUILDCLOVER_DIR/FileSystems/HFSPlus/X64 ]]; then
-	mkdir -p $BUILDCLOVER_DIR/FileSystems/HFSPlus/X64
-fi
-#x64
 echo -e "\033[1mCopying Custom EFI drivers.\033[0m"
-cp -f "$SRC_DIR"/drivers/HFSPlus.efi $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/drivers/UEFI/HFSPlus.efi
-cp -f "$SRC_DIR"/drivers/HFSPlus.efi $BUILDCLOVER_DIR/FileSystems/HFSPlus/X64/HFSPlus.efi
 #x32
 if [[ ! -d $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/drivers32 ]]; then
 	mkdir -p $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/drivers32
@@ -56,7 +50,6 @@ rm -Rf $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/drivers/off/BIOS/FileV
 rm -f $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/drivers/off/UEFI/FileSystem/Fat.efi
 rm -f $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/drivers/off/UEFI/FileSystem/VBoxExt2.efi
 rm -f $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/drivers/off/UEFI/FileSystem/VBoxExt4.efi
-rm -f $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/drivers/off/UEFI/FileSystem/VBoxHfs.efi
 rm -f $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/drivers/off/UEFI/FileSystem/VBoxIso9600.efi
 rm -Rf $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/drivers/off/UEFI/FileVault2
 rm -Rf $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/drivers/off/UEFI/HID
