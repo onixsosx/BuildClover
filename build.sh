@@ -4,17 +4,18 @@
 # $2 = toolchain (XCODE8, GCC53 etc.)
 
 echo -e "\033[1mRunning Pre-build expansion script for buildme.\033[0m"
+echo "build.sh is using $2 toolchain."
 
 cd $BUILDCLOVER_DIR
-#boot6
-./ebuild.sh -fr -D NO_GRUB_DRIVERS_EMBEDDED -t $2
+#boot7
+./ebuild.sh -fr -mc --no-usb -D NO_GRUB_DRIVERS_EMBEDDED -t $2
 if [[ $? != 0 ]]; then
 	echo -e "\033[1mFAIL: Building Clover failed.\033[0m"
 	echo
 	exit 1
 fi
-#boot7
-./ebuild.sh -fr -mc --no-usb -D NO_GRUB_DRIVERS_EMBEDDED -t $2
+#boot6
+./ebuild.sh -fr -D NO_GRUB_DRIVERS_EMBEDDED -D LESS_DEBUG -t $2
 if [[ $? != 0 ]]; then
 	echo -e "\033[1mFAIL: Building Clover failed.\033[0m"
 	echo
