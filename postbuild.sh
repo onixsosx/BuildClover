@@ -10,18 +10,12 @@ cd $BUILDCLOVER_DIR
 if [[ ! -d $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/kexts/Off ]]; then
 	mkdir -p $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/kexts/Off
 fi
-echo -e "\033[1mCopying Custom EFI drivers.\033[0m"
-#x32
-if [[ ! -d $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/drivers32 ]]; then
-	mkdir -p $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/drivers32
-fi
-cp -f "${SRC_DIR}"/drivers/CLOVERIA32.efi $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/CLOVERIA32.efi
-cp -f "${SRC_DIR}"/drivers/FSInject-32.efi $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/drivers32/FSInject-32.efi
-cp -f "${SRC_DIR}"/drivers/bdmesg-32.efi $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/tools/bdmesg-32.efi
-cp -f "${SRC_DIR}"/drivers/boot3 $BUILDCLOVER_DIR/CloverPackage/CloverV2/Bootloaders/x64/boot3
 echo -e "\033[1mRemoving unneeded drivers & folders.\033[0m"
 ## drivers/BIOS
+rm -f $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/drivers/BIOS/SMCHelper.efi
 rm -f $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/drivers/BIOS/XhciDxe.efi
+## drivers/UEFI
+rm -f $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/drivers/UEFI/SMCHelper.efi
 ## drivers/off/BIOS
 rm -f $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/drivers/off/BIOS/FileSystem/GrubEXFAT.efi
 rm -f $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/drivers/off/BIOS/FileSystem/GrubISO9660.efi
