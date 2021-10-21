@@ -19,6 +19,9 @@ rm -f $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/drivers/off/BIOS/FileSy
 rm -f $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/drivers/off/BIOS/FileSystem/GrubNTFS.efi
 rm -f $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/drivers/off/BIOS/FileSystem/GrubUDF.efi
 rm -Rf $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/drivers/off/BIOS/FileVault2
+if [[ ! -e "$BUILDCLOVER_DIR"/CloverPackage/CloverV2/EFI/CLOVER/drivers/BIOS/OpenRuntime.efi ]]; then
+	cp -fp "$BUILDCLOVER_DIR"/CloverPackage/CloverV2/EFI/CLOVER/drivers/off/UEFI/MemoryFix/OpenRuntime.efi "$BUILDCLOVER_DIR"/CloverPackage/CloverV2/EFI/CLOVER/drivers/BIOS
+fi
 ## drivers/off/UEFI
 rm -f $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/drivers/off/UEFI/FileSystem/Fat.efi
 rm -f $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/drivers/off/UEFI/FileSystem/VBoxExt2.efi
