@@ -33,7 +33,6 @@ rm -Rf $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/drivers/off/UEFI/HID
 rm -f $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/drivers/off/UEFI/Other/CsmVideoDxe.efi
 rm -f $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/drivers/off/UEFI/Other/NvmExpressDxe.efi
 rm -f $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/drivers/off/UEFI/Other/OsxFatBinaryDrv.efi
-## drivers/UEFI
-rm -Rf $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/drivers/UEFI
+rm -Rf $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/drivers/UEFI/EnglishDxe.efi
 
 exit 0
