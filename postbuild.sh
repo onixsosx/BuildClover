@@ -12,8 +12,8 @@ if [[ ! -d $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/kexts/Off ]]; then
 fi
 echo -e "\033[1mRemoving unneeded drivers & folders.\033[0m"
 ## drivers/BIOS
-rm -f $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/drivers/BIOS/EnglishDxe.efi
-rm -f $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/drivers/BIOS/XhciDxe.efi
+#rm -f $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/drivers/BIOS/EnglishDxe.efi
+#rm -f $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/drivers/BIOS/XhciDxe.efi
 ## drivers/off/BIOS
 rm -f $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/drivers/off/BIOS/FileSystem/GrubEXFAT.efi
 rm -f $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/drivers/off/BIOS/FileSystem/GrubISO9660.efi
@@ -31,8 +31,10 @@ rm -f $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/drivers/off/UEFI/FileSy
 rm -Rf $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/drivers/off/UEFI/FileVault2
 rm -Rf $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/drivers/off/UEFI/HID
 rm -f $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/drivers/off/UEFI/Other/CsmVideoDxe.efi
+rm -f $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/drivers/off/UEFI/Other/EmuVariableUefi.efi
+
 rm -f $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/drivers/off/UEFI/Other/NvmExpressDxe.efi
 rm -f $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/drivers/off/UEFI/Other/OsxFatBinaryDrv.efi
-rm -Rf $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/drivers/UEFI/EnglishDxe.efi
+#rm -Rf $BUILDCLOVER_DIR/CloverPackage/CloverV2/EFI/CLOVER/drivers/UEFI/EnglishDxe.efi
 
 exit 0
